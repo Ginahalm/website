@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="elyts.css">
+    <title>Another Website</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">On Point</a></div>
+                 <ul class="links">
+                     <li><a href="home">Home</a></li>
+                     <li><a href="about">About</a></li>
+                     <li><a href="service">Services</a></li>
+                     <li><a href="contact">Contact</a></li>
+                 </ul>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="home">Home</a></li>
+                     <li><a href="about">About</a></li>
+                     <li><a href="service">Services</a></li>
+                     <li><a href="contact">Contact</a></li>  
+        </div>
+    </header>
+
+    <section class="box">
+        <video src="media/videoplayback (online-video-cutter.com).mp4" autoplay muted loop></video>
+        <h1>Game Store</h1>
+        <h3>"Warning: Our website might be addictive! Enter the game zone at your own risk and say goodbye to your productivity. Don't say we didn't 'game' you a heads up!"</h3>
+        <a href="#" class="boxBtn">Contact Us</a>
+    </section>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const DropDownenu = document.querySelector('.dropdown_menu')
+    
+    toggleBtn.onclick = function() {
+        DropDownenu.classList.toggle('open')
+        const isOpen = DropDownenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+    </script>
+</body>
+</html>
